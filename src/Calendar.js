@@ -32,6 +32,7 @@ const Calendar = ({
   selectorStartingYear,
   selectorEndingYear,
   locale,
+  label,
   shouldHighlightWeekends,
   renderFooter,
   customDaysClassName,
@@ -129,6 +130,7 @@ const Calendar = ({
       <Header
         maximumDate={maximumDate}
         minimumDate={minimumDate}
+        label={label}
         activeDate={activeDate}
         onMonthChange={handleMonthChange}
         onMonthSelect={toggleMonthSelector}
@@ -208,6 +210,7 @@ Calendar.propTypes = {
   calendarClassName: PropTypes.string,
   colorPrimary: PropTypes.string,
   colorPrimaryLight: PropTypes.string,
+  label: PropTypes.string,
   slideAnimationDuration: PropTypes.string,
   minimumDate: PropTypes.shape(DAY_SHAPE),
   maximumDate: PropTypes.shape(DAY_SHAPE),

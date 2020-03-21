@@ -32,6 +32,7 @@ const DatePicker = ({
   locale,
   shouldHighlightWeekends,
   renderFooter,
+  label,
   customDaysClassName,
 }) => {
   const calendarContainerElement = useRef(null);
@@ -158,6 +159,7 @@ const DatePicker = ({
           >
             <Calendar
               value={value}
+              label={label}
               onChange={handleCalendarChange}
               calendarClassName={calendarClassName}
               calendarTodayClassName={calendarTodayClassName}

@@ -14,6 +14,7 @@ const Header = ({
   onYearSelect,
   isMonthSelectorOpen,
   isYearSelectorOpen,
+  label,
   locale,
 }) => {
   const headerElement = useRef(null);
@@ -152,6 +153,11 @@ const Header = ({
 
   return (
     <div ref={headerElement} className="Calendar__header">
+      {label && (
+        <div className="header_label">
+          <span>{label}</span>
+        </div>
+      )}
       <button
         className="Calendar__monthArrowWrapper -right"
         onClick={() => {
